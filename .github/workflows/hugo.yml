@@ -28,12 +28,6 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Checkout main gh repo
-        uses: actions/checkout@v6
-        with:
-          repository: Peter-Hu12138/hugo-site
-          path: main-site
-          token: ${{  }}
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
