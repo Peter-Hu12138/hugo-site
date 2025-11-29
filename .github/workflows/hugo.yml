@@ -28,10 +28,19 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: Checkout main gh repo
+        uses: actions/checkout@v6
+        with:
+          repository: Peter-Hu12138/hugo-site
+          path: main-site
+          token: ${{  }}
+          
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./public
+          deploy_key: ${{ secrets.MAIN_ACCESS_TOKEN }}
+          external_repository: Peter-Hu12138/Peter-Hu12138.github.io
+          publish_branch: main  # default: gh-pages
+          publish_dir: ./public 
+
