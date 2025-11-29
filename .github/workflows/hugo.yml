@@ -33,7 +33,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          deploy_key: ${{ secrets.MAIN_ACCESS_TOKEN }}
+          personal_token: ${{ secrets.MAIN_ACCESS_TOKEN }}
           external_repository: Peter-Hu12138/Peter-Hu12138.github.io
           publish_branch: main  # default: gh-pages
           publish_dir: ./public 
