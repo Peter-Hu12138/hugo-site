@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hardware on Jingtian Hu&#39;s website</title>
+    <link>http://localhost:1313/tags/hardware/</link>
+    <description>Recent content in Hardware on Jingtian Hu&#39;s website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 Dec 2025 00:27:07 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSC258</title>
+      <link>http://localhost:1313/notes/csc258/</link>
+      <pubDate>Sun, 07 Dec 2025 00:27:07 -0500</pubDate>
+      <guid>http://localhost:1313/notes/csc258/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
