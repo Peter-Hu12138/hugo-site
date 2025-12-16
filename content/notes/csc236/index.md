@@ -65,7 +65,7 @@ What follows are conditions to check for recursive algorithm correctness, the pr
 Assume precondition is met, proving the following suffices as proof of the correctness of the algorithm:
 
 1. Valid calls (Validity):  all the calls are valid (satisfying preconditions), non-recursive ones and recursive ones.
-2. Valid recursively (Termination): Size is a function of input whose output is the a natural, and we need to prove size is strictly decreasing in consecutive recursive calls by showing each function delegates to recursive calls with a value whose size is smaller.
+2. Valid recursively (Termination): Size is a function of input whose output is a natural, and we need to prove size is strictly decreasing in consecutive recursive calls by showing each function delegates to recursive calls with a value whose size is smaller.
 3. Correct Return Value (CRV): Assuming recursive calls are correct - i.e. if we supplement the calls with correct input values, they will terminate and return correct return values free of error, we prove the algorithm returns correct return values.
 
 Why is it correct? The principle relies on Well Ordering Principle and induction under the hood.
@@ -80,7 +80,7 @@ After setting up, we get this guy with aid of size function: \\(\forall n \in \m
 
 Let \\(n \in \mathbb{N}\\) and assume \\(\forall k \in \mathbb{N}, k < n \implies \forall c \in C, k = size(c) \implies P(c)\\) (I.H.) Since we proved any recursive call made has a smaller size (valid recursively), by I.H., we can work with these recursive calls as if they are correct as they descend to smaller sizes by "valid recursively" and conclude with complete induction that the algorithm is correct on every input from \\(C\\).
 
-> **Note:** Intuively, we can understand it as if we are trying to find a metric - the size function with a codomain of naturals - such that the recursive algorithm is always calling (or delegating) itself with smaller inputs with respect to the metric.
+> **Note:** Intuitively, we can understand it as if we are trying to find a metric - the size function with a codomain of naturals - such that the recursive algorithm is always calling (or delegating) itself with smaller inputs with respect to the metric.
 
 Similarly, a structural induction approach could make a proof but perhaps cleaner for this proof omits a definition of a size function but requires a construction of a recurrence definition of the input size. It is then needed that we prove \\(P\\) on the base cases and then on the constructor cases, which could naturally match the writeup of the algorithm.
 
@@ -91,7 +91,7 @@ Proving that iterative algorithms are correct is similar, relying on inductive t
 Usually, a iterative algorthm correctness has two major goals, normal termination (terminating free of error) and correct return value, which usually correspond to the following trifold procedure:
 
 1. Validity: Every operation and function call are correct. This is usually done through proving variables are of certain types and/ or of certain ranges so that all the operands have the correct types and all the function calls are made with correct input value: satisfying precondition.
-2. Termination: Similar to Recursive correctness, we define a bounded, strict monotonic integer variant (c.p. size) on loop variables so that by consequences of Well Ordering Principle, we know the sequence of variant at each iteration forms is finite.
+2. Termination: Similar to Recursive correctness, we define a bounded, strict monotonic integer variant (cp. size) on loop variables so that by consequences of Well Ordering Principle, we know the sequence of variant at each iteration forms is finite.
 3. Correct Return Value: This step requires possibly the most inventiveness out of all three. Unlike recursive algorithm where we can rely on post condition of itself, we have to come up with our invariant that ensures the correctness of return value exiting the loop and just before return.
 
 
