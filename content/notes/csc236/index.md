@@ -8,7 +8,7 @@ tags = ['Theory']
 {{< katex >}}
 I am still on my way to finish the notes for CSC236.
 ## Introduction
-Computer Science is about problem-solving: understanding, modelling, and solving problems. How do computer scientists ensure what they do is correct? Logic and math are all you need, and of all the math humans have explored, discrete mathmatics is the most relevant to the core of computer science - logic, language, and formal representation of structures. Thus, naturally, a lot of contents in the course concern topics in discrete mathematics if not all.
+Computer Science is about problem-solving: understanding, modelling, and solving problems. How do computer scientists ensure what they do is correct? Logic and math are all you need, and of all the math humans have explored, discrete mathematics is the most relevant to the core of computer science - logic, language, and formal representation of structures. Thus, naturally, a lot of contents in the course concern topics in discrete mathematics if not all.
 
 ## Induction
 
@@ -25,7 +25,7 @@ Let \\(P\\) be any predicate on naturals. Principle of Complete Induction is
 
 $$[\forall n \in \mathbb{N}. [\forall k \in \mathbb{N}. k < n \implies P(k)] \implies P(n)] \implies \forall n \in \mathbb{N} P(n)$$
 
-Note that the base cases are still there but ladden.
+Note that the base cases are still there but latent.
 
 ### Structural Induction
 
@@ -40,7 +40,7 @@ $$\forall s_1, s_2, ..., s_m \in S, f_1(s_1, ...) \in S, f_2(s_1,) \in S, ..., f
 Then the Principle of Structural Induction states for any arbitrary predicate on \\(S\\):
 
 proving
-$$\forall b \in B, P(b) \wedge [\forall s_1, s_2, ..., s_m, \bigwedge_i^n {P(s_i)} \implies \bigwedge_i^k {f_i(s_1, ...)}]$$ is sufficient to show
+$$\forall b \in B, P(b) \wedge [\forall s_1, s_2, ..., s_m, \bigwedge_i^n {P(s_i)} \implies \bigwedge_i^k {P(f_i(s_1, ...)})]$$ is sufficient to show
 $$\forall s \in S, P(s)$$
 
 
