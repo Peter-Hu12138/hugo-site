@@ -88,10 +88,10 @@ Similarly, a structural induction approach could make a proof but perhaps cleane
 
 Proving that iterative algorithms are correct is similar, relying on inductive thinking, with differences in how repetitions are handled: iterative algorithms don't call themselves on smaller cases but base their correctness off what was left after previous iterations - a.k.a. Loop Invariants.
 
-Usually, a iterative algorthm correctness has two major goals, normal termination (terminating free of error) and correct return value, which usually correspond to the following trifold precedure:
+Usually, a iterative algorthm correctness has two major goals, normal termination (terminating free of error) and correct return value, which usually correspond to the following trifold procedure:
 
-1. Validity: Every operation and function call are correct. This is usually done through proving variables are of certain types and/ or of certain ranges so that all the operends have the correct types and all the function calls are made with correct input value: satisfying precondition.
-2. Termination: Similar to Recursive correctness, we define a bounded, strict monotonic interger variant (c.p. size) on loop variables so that by consequences of Well Ordering Principle, we know the sequence of variant at each iteration forms is finite.
+1. Validity: Every operation and function call are correct. This is usually done through proving variables are of certain types and/ or of certain ranges so that all the operands have the correct types and all the function calls are made with correct input value: satisfying precondition.
+2. Termination: Similar to Recursive correctness, we define a bounded, strict monotonic integer variant (c.p. size) on loop variables so that by consequences of Well Ordering Principle, we know the sequence of variant at each iteration forms is finite.
 3. Correct Return Value: This step requires possibly the most inventiveness out of all three. Unlike recursive algorithm where we can rely on post condition of itself, we have to come up with our invariant that ensures the correctness of return value exiting the loop and just before return.
 
 
