@@ -2,6 +2,7 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://jpanther.github.io/congo/docs/getting-started/
 
+
 baseURL = "https://peter-hu12138.github.io/"
 defaultContentLanguage = "en"
 languageCode = "en"
@@ -30,3 +31,16 @@ summaryLength = 0
 [services]
   [services.x]
     disableInlineCSS = true
+
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$']]
+          inline = [['$', '$']]
+[params]
+  math = true
